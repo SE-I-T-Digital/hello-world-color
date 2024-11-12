@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   hello-world:
-    image: sbh69/hello-world-color
+    image: sbh69/hello-world-color:0.1.1
     ports:
       - "${HOST_PORT:-8080}:80"
     volumes:
