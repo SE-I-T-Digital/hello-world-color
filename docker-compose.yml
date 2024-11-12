@@ -6,7 +6,11 @@ services:
     ports:
       - "${HOST_PORT:-8080}:80"
     volumes:
-      - /home/intdigital/dev/margo/app-data:/usr/share/nginx/html
+      - app-data:/usr/share/nginx/html
     environment:
       - BACKGROUND_COLOR=${BACKGROUND_COLOR:-lightblue}  # Default color
       - DISPLAY_IMAGE=${DISPLAY_IMAGE:-hello-world.png}  # Default image
+
+volumes:
+  app-data:
+    name: app-data
