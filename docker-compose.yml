@@ -7,10 +7,10 @@ services:
       - "${HOST_PORT:-8080}:80"
     volumes:
       - type: volume
-        source: app-data
+        source: app
         target: /usr/share/nginx/html
         volume: 
-          # /var/lib/docker/volumes/app-data/_data/${COMPOSE_PROJECT_NAME}:/usr/share/nginx/html
+          # /var/lib/docker/volumes/app/_data/${COMPOSE_PROJECT_NAME}:/usr/share/nginx/html
           subpath: ${COMPOSE_PROJECT_NAME}
         read_only: true
     environment:
@@ -18,5 +18,5 @@ services:
       - DISPLAY_IMAGE=${DISPLAY_IMAGE:-hello-world.png}  # Default image
 
 volumes:
-  app-data:
-    name: app-data
+  app:
+    name: app
