@@ -8,7 +8,7 @@ services:
         source: app
         target: /usr/share/nginx/html
         volume: 
-          # /var/lib/docker/volumes/app/_data/${COMPOSE_PROJECT_NAME}:/usr/share/nginx/html
+          # /var/lib/docker/volumes/${COMPOSE_PROJECT_NAME}_app/_data:/usr/share/nginx/html
           subpath: ${COMPOSE_PROJECT_NAME}
     environment:
       - BACKGROUND_COLOR=${BACKGROUND_COLOR:-lightblue}  # Default color
@@ -16,4 +16,3 @@ services:
 
 volumes:
   app:
-    name: app
