@@ -12,7 +12,6 @@ services:
         volume: 
           # /var/lib/docker/volumes/app/_data/${COMPOSE_PROJECT_NAME}:/usr/share/nginx/html
           subpath: ${COMPOSE_PROJECT_NAME}
-        read_only: true
     environment:
       - BACKGROUND_COLOR=${BACKGROUND_COLOR:-lightblue}  # Default color
       - DISPLAY_IMAGE=${DISPLAY_IMAGE:-hello-world.png}  # Default image
