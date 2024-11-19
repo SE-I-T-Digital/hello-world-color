@@ -6,7 +6,7 @@ Docker compose for installation:
 - Run with defaults env's: docker-compose up -d
 
 For debugging inject variables via cli
-- Run with override env's: DISPLAY_IMAGE=hello-world-2.png BACKGROUND_COLOR=lightgreen docker-compose up -d
+- Run with override env's: HOST_PORT=8080 DISPLAY_IMAGE=hello-world-2.png BACKGROUND_COLOR=lightgreen docker-compose -f docker-compose.yml -p appName up -d
 
 
 Access the Application http://localhost:8080
