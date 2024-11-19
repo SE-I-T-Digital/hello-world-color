@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   hello-world:
     image: sbh69/hello-world-color:0.1.1
