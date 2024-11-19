@@ -7,9 +7,7 @@ services:
       - type: volume
         source: app
         target: /usr/share/nginx/html
-        #volume: 
-          # /var/lib/docker/volumes/${COMPOSE_PROJECT_NAME}_app/_data:/usr/share/nginx/html
-          #subpath: ${COMPOSE_PROJECT_NAME}
+        # /var/lib/docker/volumes/${COMPOSE_PROJECT_NAME}_app/_data:/usr/share/nginx/html
     environment:
       - BACKGROUND_COLOR=${BACKGROUND_COLOR:-lightblue}  # Default color
       - DISPLAY_IMAGE=${DISPLAY_IMAGE:-hello-world.png}  # Default image
