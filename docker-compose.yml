@@ -5,7 +5,7 @@ services:
       - "${HOST_PORT:-8080}:80"
     volumes:
       - type: bind
-        source: /home/intdigital/dev/margo/app
+        source: /home/${USER}/dev/margo/app
         target: /usr/share/nginx/html/files
         # /var/lib/docker/volumes/${COMPOSE_PROJECT_NAME}_app/_data:/usr/share/nginx/html
     environment:
