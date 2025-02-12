@@ -4,13 +4,10 @@ services:
     ports:
       - "${HOST_PORT:-8080}:80"
     volumes:
-      - type: volume
-        source: app
-        target: /usr/share/nginx/html
+      - type: bind
+        source: ./app
+        target: /usr/share/nginx/html/files
         # /var/lib/docker/volumes/${COMPOSE_PROJECT_NAME}_app/_data:/usr/share/nginx/html
     environment:
       - BACKGROUND_COLOR=${BACKGROUND_COLOR:-lightblue}  # Default color
       - DISPLAY_IMAGE=${DISPLAY_IMAGE:-hello-world.png}  # Default image
-
-volumes:
-  app:
